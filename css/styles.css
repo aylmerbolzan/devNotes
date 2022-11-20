@@ -14,12 +14,13 @@ body {
 /* Cabeçalho */
 
 header {
-  border-bottom: 1px solid #5f6368;
+  border-bottom: 1px solid #17181a;
   padding: 1rem 2rem;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  box-shadow: 0px 2px 5px #17181a;
 }
 
 #search-container {
@@ -36,6 +37,7 @@ header {
   font-weight: bold;
   color: #ddd;
   width: 400px;
+  outline-offset: -3px;
 }
 
 #search-input::placeholder {
@@ -85,6 +87,11 @@ header {
   color: #fff;
 }
 
+#add-note-container button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
 /* Notas */
 
 #notes-container {
@@ -102,6 +109,12 @@ header {
   border-radius: 10px;
   color: #fff;
   position: relative;
+}
+
+.note:focus-within {
+  border-color: #FBBC04;
+  box-shadow: 0px 0px 8px #FBBC04;
+  transition: 0.2s;
 }
 
 .note textarea {
@@ -151,5 +164,6 @@ header {
 }
 
 .note.fixed {
-    background-color: #3c3c3f;
+  background-color: #1d1b15;
+  border-color: #503c02;
 }
